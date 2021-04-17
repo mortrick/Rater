@@ -1,10 +1,3 @@
-from .Utils.utils import getCmcApiKey
-import os
+from Utils import utils as ut
 
 
-# data = utils.get_data()
-
-# print(data)
-
-print(os.getcwd())
-print(getCmcApiKey())
