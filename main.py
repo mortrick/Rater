@@ -1,27 +1,10 @@
-from  Utils import utils
-from requests import Request, Session
-from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
-import json
+from .Utils.utils import getCmcApiKey
+import os
 
-url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
 
-parameters = {
-  'start':'1',
-  'limit':'3000',
-  'convert':'USD'
-}
+# data = utils.get_data()
 
-headers = {
-  'Accepts': 'application/json',
-  'X-CMC_PRO_API_KEY': utils.getCmcApiKey(),
-}
+# print(data)
 
-session = Session()
-session.headers.update(headers)
-
-try:
-  response = session.get(url, params=parameters)
-  data = json.loads(response.text)
-  print(data)
-except (ConnectionError, Timeout, TooManyRedirects) as e:
-  print(e)
+print(os.getcwd())
+print(getCmcApiKey())
