@@ -96,5 +96,5 @@ def insert_data_to_sql():
         row_number += 1
         if len(data_array) != row_number:
             sql += ',' + '\n'
-        truncate = "Truncate table Mrr_Crypto_stats"
-        execute_sql(sql1=truncate, sql2=sql)
+    truncate = "Truncate table Mrr_Crypto_stats"
+    execute_sql(sql1=truncate, sql2=sql)
